@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-labelledby="titulo-img">
+  <title id="titulo-img">Sala de leitura com janela, planta, mesa com livro aberto, cadeira e estante</title>
+  <!-- parede e piso -->
+  <rect width="480" height="300" fill="#efe2cc"/>
+  <rect y="248" width="480" height="52" fill="#c9b494"/>
+  <!-- janela -->
+  <rect x="40" y="30" width="150" height="130" rx="8" fill="#fdf6e6"/>
+  <polygon points="52,145 95,95 125,125 150,90 185,145" fill="#b5c7a8"/>
+  <rect x="111" y="30" width="8" height="130" fill="#8faa9c"/>
+  <rect x="40" y="95" width="150" height="8" fill="#8faa9c"/>
+  <!-- planta -->
+  <rect x="44" y="232" width="38" height="40" rx="4" fill="#b3684b"/>
+  <rect x="61" y="190" width="5" height="44" fill="#4f7a55"/>
+  <ellipse cx="50" cy="200" rx="18" ry="10" fill="#5c8a5f" transform="rotate(35 50 200)"/>
+  <ellipse cx="80" cy="186" rx="18" ry="10" fill="#6d9a6c" transform="rotate(-35 80 186)"/>
+  <!-- mesa e livro aberto -->
+  <rect x="140" y="210" width="150" height="14" rx="6" fill="#8a5a3c"/>
+  <rect x="155" y="222" width="10" height="50" fill="#7a4e33" transform="rotate(8 160 222)"/>
+  <rect x="268" y="222" width="10" height="50" fill="#7a4e33" transform="rotate(-8 273 222)"/>
+  <path d="M185 210 Q205 196 228 206 Q250 196 270 210 Z" fill="#fffaf0"/>
+  <line x1="228" y1="200" x2="228" y2="210" stroke="#b9a98c" stroke-width="2"/>
+  <!-- cadeira -->
+  <path d="M300 150 Q302 128 316 130 Q326 134 324 160 L320 210 L304 210 Z" fill="#b8694a"/>
+  <rect x="300" y="206" width="8" height="66" fill="#7a4e33" transform="rotate(6 304 206)"/>
+  <rect x="316" y="206" width="8" height="66" fill="#7a4e33" transform="rotate(-14 320 206)"/>
+  <!-- estante -->
+  <rect x="340" y="40" width="112" height="208" rx="8" fill="#6b8470"/>
+  <rect x="350" y="98" width="92" height="7" fill="#e8d6ae"/>
+  <rect x="350" y="160" width="92" height="7" fill="#e8d6ae"/>
+  <rect x="350" y="230" width="92" height="7" fill="#e8d6ae"/>
+  <rect x="356" y="62" width="14" height="36" fill="#e5a96b"/>
+  <rect x="374" y="70" width="22" height="28" fill="#eadfc1"/>
+  <rect x="400" y="58" width="14" height="40" fill="#a6c1c0"/>
+  <rect x="368" y="122" width="22" height="38" fill="#e5a96b"/>
+  <rect x="394" y="116" width="14" height="44" fill="#eadfc1"/>
+  <rect x="412" y="126" width="24" height="34" fill="#a6c1c0"/>
+  <rect x="356" y="196" width="22" height="34" fill="#eadfc1"/>
+  <rect x="382" y="186" width="34" height="44" fill="#a6c1c0"/>
+  <rect x="420" y="192" width="14" height="38" fill="#e5a96b"/>
+</svg>

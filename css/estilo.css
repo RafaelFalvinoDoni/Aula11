@@ -1,0 +1,238 @@
+/* =========================================================
+   HORIZONTE · estilo.css (usado pelas duas páginas)
+   Mobile first: primeiro o layout estreito (celular),
+   depois as media queries para telas maiores.
+   Breakpoints: 600px e 900px
+   ========================================================= */
+
+/* ---------- Base ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;              /* rodapé sempre no fim da janela */
+  flex-direction: column;
+  background-color: #fdfcf7;
+  color: #24453a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+h1,
+h2 {
+  margin: 0 0 12px;
+  color: #234a3c;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+p {
+  margin: 0 0 16px;
+}
+
+a:focus-visible {
+  outline: 3px solid #d9822b;  /* foco visível no teclado */
+  outline-offset: 3px;
+}
+
+/* ---------- FLEXBOX 1: cabeçalho ---------- */
+.cabecalho {
+  display: flex;
+  flex-direction: column;     /* celular: nome em cima, menu embaixo */
+  gap: 12px;
+  padding: 20px;
+  background-color: #e2ebe4;
+}
+
+.marca {
+  color: #234a3c;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;              /* os dois links lado a lado */
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.menu a {
+  color: #24453a;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 3px solid transparent;
+}
+
+/* página atual: negrito + sublinhado (não depende só da cor) */
+.menu a.ativo {
+  font-weight: bold;
+  border-bottom-color: #2b5e47;
+}
+
+/* ---------- Área principal ---------- */
+.conteudo {
+  flex: 1;                    /* ocupa o espaço que sobra */
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ---------- FLEXBOX 2: página Início ---------- */
+.apresentacao {
+  display: flex;
+  flex-direction: column;     /* celular e tablet: tudo empilhado */
+  gap: 16px;
+}
+
+/* No estreito o grupo .textos "se abre" e seus filhos
+   entram no flex. Assim o título fica ANTES da imagem. */
+.textos {
+  display: contents;
+}
+
+.textos h1 { order: 1; }
+.foto      { order: 2; }
+.textos p  { order: 3; }
+.botao     { order: 4; }
+
+.foto {
+  width: 100%;
+  max-width: 100%;
+  height: auto;               /* mantém a proporção */
+  display: block;
+}
+
+.textos p {
+  margin: 0;
+}
+
+.botao {
+  display: block;
+  margin-top: 8px;
+  padding: 12px 18px;
+  background-color: #2b5e47;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+/* ---------- Página Visita ---------- */
+.intro {
+  margin-bottom: 24px;
+}
+
+/* FLEXBOX 3: os três blocos */
+.blocos {
+  display: flex;
+  flex-wrap: wrap;            /* deixa os blocos quebrarem de linha */
+  gap: 16px;
+}
+
+.bloco {
+  flex: 1 1 100%;             /* celular: um bloco por linha */
+  padding: 16px;
+  background-color: #ecf1ea;
+  border-radius: 8px;
+}
+
+.bloco p {
+  margin: 0;
+}
+
+.voltar {
+  display: inline-block;
+  margin-top: 20px;
+  color: #234a3c;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* ---------- Rodapé ---------- */
+.rodape {
+  padding: 16px 20px;
+  background-color: #e2ebe4;
+  font-size: 14px;
+}
+
+.rodape p {
+  margin: 0;
+}
+
+/* =========================================================
+   BREAKPOINT 600px (tablet)
+   - cabeçalho em linha: nome à esquerda, menu à direita
+   - blocos de Visita em 2 colunas (o 3º desce)
+   ========================================================= */
+@media (min-width: 600px) {
+  .cabecalho {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 40px;
+  }
+
+  .conteudo {
+    padding: 24px 40px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .botao {
+    display: inline-block;    /* botão deixa de ocupar a largura toda */
+    align-self: flex-start;
+  }
+
+  .bloco {
+    flex: 1 1 calc(50% - 8px);
+    max-width: calc(50% - 8px);
+  }
+}
+
+/* =========================================================
+   BREAKPOINT 900px (desktop)
+   - Início: imagem e textos lado a lado
+   - Visita: os três blocos na mesma linha
+   ========================================================= */
+@media (min-width: 900px) {
+  .apresentacao {
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .foto {
+    order: 0;                 /* imagem volta para a esquerda */
+    flex: 1 1 50%;
+    min-width: 0;
+  }
+
+  .textos {
+    display: block;           /* volta a ser um grupo: título + textos */
+    flex: 1 1 50%;
+  }
+
+  .textos p {
+    margin-bottom: 16px;
+  }
+
+  .bloco {
+    flex: 1 1 0;
+    max-width: none;
+  }
+}

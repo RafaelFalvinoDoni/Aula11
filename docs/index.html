@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Início | Horizonte</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+  <!-- FLEXBOX 1: cabeçalho (filhos diretos: .marca e .menu) -->
+  <header class="cabecalho">
+    <a class="marca" href="index.html">HORIZONTE</a>
+    <nav class="menu" aria-label="Menu principal">
+      <a href="index.html" class="ativo" aria-current="page">Início</a>
+      <a href="visita.html">Visita</a>
+    </nav>
+  </header>
+
+  <main class="conteudo">
+    <!-- FLEXBOX 2: imagem + textos (filhos diretos: .foto e .textos) -->
+    <section class="apresentacao">
+      <img class="foto" src="img/sala-de-leitura.svg"
+           alt="Sala de leitura com janela, planta, mesa com um livro aberto, cadeira e uma estante com livros.">
+
+      <div class="textos">
+        <h1>Um lugar para ler, aprender e conviver.</h1>
+        <p>Livros, encontros e novas ideias esperam por você no Horizonte.
+           Aqui, cada visita abre espaço para uma nova descoberta.</p>
+        <p>Para quem procura uma pausa ou quer aprender em companhia,
+           o espaço acolhe todas as idades.</p>
+        <a class="botao" href="visita.html">Planeje sua visita →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>Horizonte · Dados fictícios</p>
+  </footer>
+
+</body>
+</html>
